@@ -32,6 +32,11 @@ void Principal::dibujar()
     int x = 0;
     int y = 0;
 
+/* ========================================================================
+ *                              BARRA 1
+ * ========================================================================
+*/
+
     // Crear un pincel para los bordes
     QPen pincel;
     pincel.setWidth(5);
@@ -54,7 +59,8 @@ void Principal::dibujar()
 
 
     // Dibujar primera barra
-    painter.drawRect(x+50, y+50+incYN1,100,alto1);
+    painter.drawRect(x+70, y+50+incYN1,100,alto1);
+    painter.drawText(x+88,y+480,"Nota N°1");
 
 /* ========================================================================
  *                              BARRA 2
@@ -82,7 +88,8 @@ void Principal::dibujar()
     int incYN2 = this->incY(alto2);
 
     // Dibujar segunda barra
-    painter.drawRect(x+170, y+50+incYN2, 100, alto2);
+    painter.drawRect(x+190, y+50+incYN2, 100, alto2);
+    painter.drawText(x+208,y+480,"Nota N°2");
 
 /* ========================================================================
  *                              BARRA 3
@@ -105,7 +112,8 @@ void Principal::dibujar()
     int incYN3 = this->incY(alto3);
 
     // Dibujar tercera barra
-    painter.drawRect(x+290,y+50+incYN3,100,alto3);
+    painter.drawRect(x+310,y+50+incYN3,100,alto3);
+    painter.drawText(x+328,y+480,"Nota N°3");
 
 /* ========================================================================
  *                              PROMEDIO
@@ -113,17 +121,73 @@ void Principal::dibujar()
  */
 
     // Poner el color y el estilo
-    QColor colorLinea(0,0,0);
+    QColor colorLinea(41,223,41);
     pincel.setColor(colorLinea);
+    painter.setPen(pincel);
 
     // Obtener el promedio de las notas
     float promedio = (nota1 + nota2 + nota3) / 3;
     int alto4 = this->getAlto(promedio);
-//    int incYN4 = this->incY(alto4);
+    int incYN4 = this->incY(alto4);
 
     // Dibujar la rasha
-    painter.drawLine(x,y+50+alto4,500,y+50+alto4);
+    painter.drawLine(x+30,y+50+incYN4,450,y+50+incYN4);
 
+
+/* ========================================================================
+ *                              PLANO CARTESIANO
+ * ========================================================================
+*/
+
+// EJE Y
+
+    pincel.setColor(Qt::black);
+
+    painter.setPen(pincel);
+
+    painter.drawLine(x+35,y+20,x+35,y+470);
+
+    // Divicones
+
+//    Valor de 10
+    painter.drawLine(x+30,y+410,x+40,y+410);
+    painter.drawLine(x+30,y+430,x+40,y+430);
+    painter.drawText(x+3,y+415,"10");
+//    Valor de 20
+    painter.drawLine(x+30,y+370,x+40,y+370);
+    painter.drawText(x+3,y+375,"20");
+//    Valor de 30
+    painter.drawLine(x+30,y+330,x+40,y+330);
+    painter.drawText(x+3,y+335,"30");
+//    Valor de 40
+    painter.drawLine(x+30,y+290,x+40,y+290);
+    painter.drawText(x+3,y+295,"40");
+//    Valor de 50
+    painter.drawLine(x+30,y+250,x+40,y+250);
+    painter.drawText(x+3,y+255,"50");
+//    Valor de 60
+    painter.drawLine(x+30,y+210,x+40,y+210);
+    painter.drawText(x+3,y+215,"60");
+//    Valor de 70
+    painter.drawLine(x+30,y+170,x+40,y+170);
+    painter.drawText(x+3,y+175,"70");
+//    Valor de 80
+    painter.drawLine(x+30,y+130,x+40,y+130);
+    painter.drawText(x+3,y+135,"80");
+//    Valor de 90
+    painter.drawLine(x+30,y+90,x+40,y+90);
+    painter.drawText(x+3,y+95,"90");
+//    Valor de 100
+    painter.drawLine(x+30,y+50,x+40,y+50);
+    painter.drawText(x,y+55,"100");
+
+// EJE X
+
+    pincel.setColor(Qt::black);
+
+    painter.setPen(pincel);
+
+    painter.drawLine(x+10,y+450,x+450,y+450);
 }
 
 int Principal::getAlto(int valor)
