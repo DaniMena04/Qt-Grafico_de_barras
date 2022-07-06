@@ -155,30 +155,39 @@ void Principal::dibujar()
     painter.drawText(x+3,y+415,"10");
 //    Valor de 20
     painter.drawLine(x+30,y+370,x+40,y+370);
+    painter.drawLine(x+30,y+390,x+40,y+390);
     painter.drawText(x+3,y+375,"20");
 //    Valor de 30
     painter.drawLine(x+30,y+330,x+40,y+330);
+    painter.drawLine(x+30,y+350,x+40,y+350);
     painter.drawText(x+3,y+335,"30");
 //    Valor de 40
     painter.drawLine(x+30,y+290,x+40,y+290);
+    painter.drawLine(x+30,y+310,x+40,y+310);
     painter.drawText(x+3,y+295,"40");
 //    Valor de 50
     painter.drawLine(x+30,y+250,x+40,y+250);
+    painter.drawLine(x+30,y+270,x+40,y+270);
     painter.drawText(x+3,y+255,"50");
 //    Valor de 60
     painter.drawLine(x+30,y+210,x+40,y+210);
+    painter.drawLine(x+30,y+230,x+40,y+230);
     painter.drawText(x+3,y+215,"60");
 //    Valor de 70
     painter.drawLine(x+30,y+170,x+40,y+170);
+    painter.drawLine(x+30,y+190,x+40,y+190);
     painter.drawText(x+3,y+175,"70");
 //    Valor de 80
     painter.drawLine(x+30,y+130,x+40,y+130);
+    painter.drawLine(x+30,y+150,x+40,y+150);
     painter.drawText(x+3,y+135,"80");
 //    Valor de 90
     painter.drawLine(x+30,y+90,x+40,y+90);
+    painter.drawLine(x+30,y+110,x+40,y+110);
     painter.drawText(x+3,y+95,"90");
 //    Valor de 100
     painter.drawLine(x+30,y+50,x+40,y+50);
+    painter.drawLine(x+30,y+70,x+40,y+70);
     painter.drawText(x,y+55,"100");
 
 // EJE X
