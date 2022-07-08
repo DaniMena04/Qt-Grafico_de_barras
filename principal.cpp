@@ -60,7 +60,7 @@ void Principal::dibujar()
 
     // Dibujar primera barra
     painter.drawRect(x+70, y+50+incYN1,100,alto1);
-    painter.drawText(x+88,y+480,"Nota N°1");
+    painter.drawText(x+95,y+480,"Nota N°1");
 
 /* ========================================================================
  *                              BARRA 2
@@ -89,7 +89,7 @@ void Principal::dibujar()
 
     // Dibujar segunda barra
     painter.drawRect(x+190, y+50+incYN2, 100, alto2);
-    painter.drawText(x+208,y+480,"Nota N°2");
+    painter.drawText(x+215,y+480,"Nota N°2");
 
 /* ========================================================================
  *                              BARRA 3
@@ -113,7 +113,7 @@ void Principal::dibujar()
 
     // Dibujar tercera barra
     painter.drawRect(x+310,y+50+incYN3,100,alto3);
-    painter.drawText(x+328,y+480,"Nota N°3");
+    painter.drawText(x+335,y+480,"Nota N°3");
 
 /* ========================================================================
  *                              PROMEDIO
@@ -126,12 +126,13 @@ void Principal::dibujar()
     painter.setPen(pincel);
 
     // Obtener el promedio de las notas
-    float promedio = (nota1 + nota2 + nota3) / 3;
+    float promedio = (nota1 + nota2 + nota3) / 3.0;
     int alto4 = this->getAlto(promedio);
     int incYN4 = this->incY(alto4);
 
     // Dibujar la rasha
     painter.drawLine(x+30,y+50+incYN4,450,y+50+incYN4);
+    ui->inPromedio->setText(QString::number(promedio));
 
 
 /* ========================================================================

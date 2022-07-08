@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Principal</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/img/barra-grafica.png</normaloff>:/img/barra-grafica.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="outCuadro">
     <property name="geometry">
@@ -45,7 +49,7 @@
       <x>530</x>
       <y>10</y>
       <width>171</width>
-      <height>183</height>
+      <height>191</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -97,6 +101,16 @@
           </property>
          </widget>
         </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>PROMEDIO</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="inPromedio"/>
+        </item>
        </layout>
       </widget>
      </item>
@@ -109,7 +123,7 @@
      <x>0</x>
      <y>0</y>
      <width>717</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -147,6 +161,10 @@
    </property>
   </action>
   <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/img/salida.png</normaloff>:/img/salida.png</iconset>
+   </property>
    <property name="text">
     <string>Salir</string>
    </property>

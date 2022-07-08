@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>img/Save.ico</file>
+        <file>img/barra-grafica.png</file>
+        <file>img/salida.png</file>
     </qresource>
 </RCC>
